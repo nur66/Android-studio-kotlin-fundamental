@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <EditText
+        android:id="@+id/nameEditTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/sayHelloButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Say Hello"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <!--  Nantinya digunakan untuk menerima inputan  -->
+    <TextView
+        android:id="@+id/sayHelloTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        />
+
+</LinearLayout>
+
+<!--
+    Layout adalah view jika di laravel, tempat untuk menampung UI
+
+    TextView = Label
+    EditText = Textbox
+
+    TextView, EditText, Button ini sebeah class, bisa di cek di Navigate > class
+
+    orientation = ketika ditambahkan ke bawah(vertical) atau kekanan(horizontal)
+    match_parent = ambil semua layar
+    wrap conetnt = sebesar content tersebut
+
+    nb : untuk mendapatkan object dari komponen, kita bisa menggunakan findViewById
+            tetapi sebelumnya kita harus menambahkan id nya
+         best practice untuk penamaan id yaitu namanya untuk apa trus type componennya apa
+            jadi nama componenna di belakang dan di depan keperluannya untuk apa
+
+-->
