@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android Fundamental Kotlin</string>
+    <string name="nameTextView">Name</string>
 </resources>

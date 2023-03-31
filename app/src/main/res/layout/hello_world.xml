@@ -5,27 +5,7 @@
     android:layout_gravity="center_vertical"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"
-        android:layout_gravity="center_horizontal"
-        />
-
-    <EditText
-        android:id="@+id/nameEditTable"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        />
-
-    <Button
-        android:id="@+id/sayHelloButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Say Hello"
-        android:layout_gravity="center_horizontal"
-        />
+    <include layout="@layout/say_hello_form" />
 
     <!--  Nantinya digunakan untuk menerima inputan  -->
     <TextView
