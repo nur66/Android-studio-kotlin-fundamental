@@ -21,6 +21,8 @@
         android:layout_height="wrap_content"
         android:text="Say Hello"
         android:layout_gravity="center_horizontal"
+        android:textColor="@color/say_hello"
         />
+        <!--  textColor refers to res > color > say_hello  -->
 
 </merge>

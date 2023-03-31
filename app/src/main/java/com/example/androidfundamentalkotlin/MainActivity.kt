@@ -39,6 +39,12 @@ class MainActivity : AppCompatActivity() {
             // Untuk mencari nya cepat bisa menggunakan Ctrl + spasi, lalu ketik Nur
             // Biasanya Tag nya adalah nama dari class dan componentnya
 
+            Log.i("ValueResource",resources.getInteger(R.integer.maxPage).toString())
+            Log.i("ValueResource",resources.getIntArray(R.array.numbers).joinToString(","))
+            Log.i("ValueResource",resources.getBoolean(R.bool.isProductionMode).toString())
+            Log.i("ValueResource", resources.getColor(R.color.background, theme).toString())
+            sayHelloButton.setBackgroundColor(resources.getColor(R.color.background, theme))
+
             val name = nameEditText.text.toString()
             sayHelloTextView.text = "Hello $name"
         }
