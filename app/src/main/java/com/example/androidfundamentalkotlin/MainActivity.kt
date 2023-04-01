@@ -1,11 +1,14 @@
 package com.example.androidfundamentalkotlin
 
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +24,24 @@ class MainActivity : AppCompatActivity() {
         sayHelloTextView = findViewById(R.id.sayHelloTextView)
     }
 
+    // Cek apakah device tersedia feature fingerprint atau tidak
+    private fun checkFingerprint(){
+        if(packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)){
+            Log.i("FEATURE", "FEATURE FINGERPRINT ON")
+        }else{
+            Log.w("FEATURE", "FEATURE FINGERPRINT OFF")
+        }
+    }
+
+    // Ceka apakah sdk nya dibawah dari system operation S
+    private fun checkPlatformVersion(){
+        Log.i("SDK", Build.VERSION.SDK_INT.toString())
+        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
+            Log.i("SDK", "Disable feature because SDK version is lower than 31")
+        }
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.hello_world)
@@ -30,6 +51,10 @@ class MainActivity : AppCompatActivity() {
         sayHelloTextView.text = "Hello"
 
         sayHelloButton.setOnClickListener {
+
+            checkFingerprint()
+
+            checkPlatformVersion()
 
             val sample = resources.openRawResource(R.raw.sample)
                 .bufferedReader()
