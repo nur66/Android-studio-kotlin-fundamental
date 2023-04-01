@@ -39,7 +39,10 @@ class MainActivity : AppCompatActivity() {
         if(Build.VERSION.SDK_INT < Build.VERSION_CODES.S){
             Log.i("SDK", "Disable feature because SDK version is lower than 31")
         }
+    }
 
+    private fun printHello(name : String){
+        Log.i("DEBUG", name)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,8 +55,9 @@ class MainActivity : AppCompatActivity() {
 
         sayHelloButton.setOnClickListener {
 
+            val firstName = "Nur"
+            printHello(firstName)
             checkFingerprint()
-
             checkPlatformVersion()
 
             val sample = resources.openRawResource(R.raw.sample)
