@@ -31,6 +31,12 @@ class MainActivity : AppCompatActivity() {
 
         sayHelloButton.setOnClickListener {
 
+            val json = assets.open("sample.json")
+                .bufferedReader()
+                .use { it.readText() }
+
+            Log.i("ASSET", json)
+
             // untuk melihat log, mengeprint ke console, untuk melihatnya di Logcat bawah
             Log.d("Nur", "This is debug log")
             Log.i("Nur", "This is info log")
