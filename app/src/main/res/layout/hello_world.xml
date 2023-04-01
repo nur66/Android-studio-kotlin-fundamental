@@ -5,6 +5,13 @@
     android:layout_gravity="center_vertical"
     android:orientation="vertical">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/facebook"
+        />
+
     <include layout="@layout/say_hello_form" />
 
     <!--  Nantinya digunakan untuk menerima inputan  -->
